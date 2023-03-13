@@ -48,6 +48,14 @@ header{
   justify-content: center;
 }
 
+.buttom-choice{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 30px;
+  color: black;
+}
+
 .button:hover {
   background-color: #e53935;
   cursor: pointer;
@@ -78,6 +86,7 @@ header{
 
 .player-area {
   display: flex;
+  flex-direction: column;
   background-color: rgb(255, 0, 0);
   height: 300px;
   width: 800px;
@@ -109,6 +118,7 @@ header{
 
 .cpu-area {
   display: flex;
+  flex-direction: column;
   height: 300px;
   width: 800px;
   align-items: center;
@@ -128,6 +138,12 @@ header{
   animation: moveBackground 10s linear infinite;
 }
 
+.tracker{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @keyframes moveBackground {
   from {
     background-position: 0 0, 100% 0, 100% 100%, 0 100%;
@@ -143,5 +159,53 @@ header{
   }
   h1{
     display: none;
+  }
+}
+
+.pop-glow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  font-size: 70px;
+  color: rgb(208, 216, 202);
+  animation: pop-glow 1s ease-in-out infinite;
+}
+
+.pop-glow-win {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  font-size: 70px;
+  color: rgb(136, 244, 53);
+  animation: pop-glow 1s ease-in-out infinite;
+}
+
+.pop-glow-loose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  font-size: 70px;
+  color: rgb(180, 64, 55);
+  animation: pop-glow 1s ease-in-out infinite;
+}
+
+@keyframes pop-glow {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   }
 }

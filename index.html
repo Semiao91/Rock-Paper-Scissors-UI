@@ -9,26 +9,28 @@
 </head>
 <body>
     <header>
-        <h1>&#129704</h1>
-        <h1>📄</h1>
-        <h1> &#9986</h1>
+        <h1><div id="round">Round: 0</div></h1>
     </header>
     <div class="play-area">
         <div class="player-area">
-            <div class="player">Player</div>
+            <div id="player-result" class="player">Player</div>
+            <div id="player-points">Player points: 0</div>
+            <div id="player-choice"></div>
         </div>
         <div class="vs">vs</div>
         <div class="cpu-area">
-            <div class="cpu">CPU</div>
+            <div id="cpu-result" class="cpu">CPU</div>
+            <div id="cpu-points">CPU points: 0</div>
+            <div id="cpu-choice"></div>
         </div>
     </div>
-    <div class="tracker">
-        <div id="player-points"></div>
-        <div id="round"></div>
-        <div id="cpu points"></div>
+    <div class="buttom-choice">
+        <button type="button" onclick='playRound("rock", computerPlay())' class="button">&#129704</button>
+        <button type="button" onclick='playRound("paper", computerPlay())' class="button">📄</button>
+        <button type="button" onclick='playRound("scissors", computerPlay())' class="button">&#9986</button>
     </div>
-    <div class="button-container">
-        <button type="button" onclick="game(playRound)" class="button">battle</button>
+    <div class="buttom-choice">
+        <button type="button" id="restart-button" class="button">Restart</button>
     </div>
     <script src="index.js"></script>
 </body>
